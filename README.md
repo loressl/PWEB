@@ -19,6 +19,7 @@ public class Cliente {
 }
 
 //SERVIDOR
+
 public class Servidor {
     public static void main(String[] args) throws IOException{
         //só diz que vai usar a porta, fica na escuta
