@@ -9,21 +9,21 @@ import java.util.Scanner;
 public class Servidor {
 	public static void main(String[] args) throws IOException {
 		
-		//só diz que vai usar a porta, fica na escuta
-		ServerSocket serverSocket = new ServerSocket(1234);
+		//só diz que vai usar a porta, fica na escuta 
+		ServerSocket serverSocket = new ServerSocket(1234); 
 		System.out.println("Porta 1234 aberta");
-		
+
 		while(true) {
 			//bloqueia a execução do programa até que o cliente solicite a conexão
 			//e isso aconetece qdo o cliente abre um socket
 			Socket socket = serverSocket.accept();
 			
-			//filtro para leitura
+			//filtro para leitura do input stream do cliente
 			Scanner scanner = new Scanner(socket.getInputStream());
-			PrintWriter printWriter = new PrintWriter(socket.getOutputStream(),true);
-			printWriter.println(scanner.nextLine());			
+	                    //imprime o que pegou
+			System.out.println(scanner.nextLine());			
 		}
 		
-		
 	}
+
 }

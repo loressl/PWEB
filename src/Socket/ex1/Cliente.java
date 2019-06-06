@@ -1,6 +1,8 @@
 package Socket.ex1;
 
+import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -8,15 +10,16 @@ import java.net.UnknownHostException;
 public class Cliente {
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		
-		String meg= "Meu texto";
-		
-		Socket socket = new Socket("127.0.0.1", 1234);
-		System.out.println("O cliente se conectou ao servidor");		
-		
-		//o true liga uma função no método printwriter chamada de flush
-		PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
-		
-		printWriter.println(meg);
+		Socket cliente = new Socket("127.0.0.1", 1234);
+		String texto = "deu certo";
+		// obtem o fluxo de bits-stream- do cliente
+		OutputStream outputStream = cliente.getOutputStream();
+		// pega o stream
+		DataOutputStream dataOutputStream = new DataOutputStream(outputStream);
+		// envia o dado pelo stream obtido do cliente
+		dataOutputStream.writeUTF(texto);
+		dataOutputStream.flush(); // send the message
+		dataOutputStream.close();
 		
 	}
 }
