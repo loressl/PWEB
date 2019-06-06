@@ -1,6 +1,8 @@
 package Socket.ex1;
 
+import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -17,11 +19,14 @@ public class Servidor {
 			//bloqueia a execução do programa até que o cliente solicite a conexão
 			//e isso aconetece qdo o cliente abre um socket
 			Socket socket = serverSocket.accept();
+			String resposta= "Tranquilo!!";
 			
 			//filtro para leitura do input stream do cliente
 			Scanner scanner = new Scanner(socket.getInputStream());
 	                    //imprime o que pegou
-			System.out.println(scanner.nextLine());			
+			String textoMaiusculo = scanner.nextLine();
+			System.out.println(textoMaiusculo.toUpperCase());
+			
 		}
 		
 	}
