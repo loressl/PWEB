@@ -8,7 +8,7 @@ public class Cliente {
 
 	public static void main(String[] args) {
 		
-		String file = "digitar o caminho do arquivo com o nome dele";
+		String file = "C:/Users/maqui/OneDrive/Documentos/ANÁLISE E DESENVOLVIMENTO DE SISTEMAS/4º SEMESTRE/PWEB/Arquivo.txt";
 		
 		try {
 			Socket cliente = new Socket("127.0.0.1", 1234);

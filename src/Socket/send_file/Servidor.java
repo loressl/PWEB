@@ -12,7 +12,7 @@ import java.net.Socket;
 public class Servidor {
 	public static void main(String[] args) {
 		
-		String file= "digitar o destino do arquivo e o nome que quer dar a ele";
+		String file= "C:/Users/maqui/OneDrive/Documentos/ANÁLISE E DESENVOLVIMENTO DE SISTEMAS/4º SEMESTRE/PWEB/Arquivoenviadopelocliente.txt";
 		
 		try {
 			
