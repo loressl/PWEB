@@ -32,7 +32,7 @@ public class Servidor {
 		while(true) {
 			String mString = in.readLine();
 			
-			System.out.println("Mensagem recebida do cliente: "+ socket.getInetAddress().getHostAddress() + mString);
+			System.out.println("Mensagem recebida do cliente: "+ socket.getInetAddress().getHostAddress() + " "+ mString);
 			
 			if("FIM".equals(mString)) {
 				break;
