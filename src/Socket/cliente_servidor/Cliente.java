@@ -1,4 +1,4 @@
-package cliente_servidor;
+package Socket.cliente_servidor;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

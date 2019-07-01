@@ -1,4 +1,4 @@
-package Chat_Use_a_Cabeca;
+package Socket.Chat_Use_a_Cabeca;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

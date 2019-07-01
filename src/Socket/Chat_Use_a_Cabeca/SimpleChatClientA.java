@@ -1,4 +1,4 @@
-package Chat_Use_a_Cabeca;
+package Socket.Chat_Use_a_Cabeca;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;

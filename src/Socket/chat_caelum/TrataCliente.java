@@ -1,4 +1,4 @@
-package chat_caelum;
+package Socket.chat_caelum;
 
 import java.io.InputStream;
 import java.util.Scanner;
