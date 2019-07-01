@@ -18,11 +18,11 @@ public class Cliente1 {
 		BufferedReader entrada = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
 		PrintStream saida = new PrintStream(cliente.getOutputStream());
 
-		saida.println("Servidor, aqui que é cliente 1 e meu ip é " + cliente.getInetAddress());
+		saida.println("Cliente: aqui que é cliente 1 e meu ip é " + cliente.getInetAddress());
 
-		Scanner lerServidor = new Scanner(cliente.getInputStream());
+		//Scanner lerServidor = new Scanner(cliente.getInputStream());
 
-		System.out.println(lerServidor.nextLine());
+		System.out.println(entrada.readLine());
 
 		entrada.close();
 		saida.close();

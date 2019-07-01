@@ -11,12 +11,13 @@ public class Servidor {
 	public static void main(String[] args) throws IOException {
 
 		System.out.println("Iniciando servidor.");
-
+		//criando um socket q fica escutando a porta 
 		ServerSocket servidorServerSocket = new ServerSocket(1234);
 
 		System.out.println("Aguardando conexão com o cliente...");
-		
+		//loop principal
 		while(true) {
+			
 			Socket cliente = servidorServerSocket.accept();
 			System.out.println("Conexão estabelecida.");
 			
