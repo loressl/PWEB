@@ -18,7 +18,7 @@ public class Cliente {
 			DataInputStream entrada = new DataInputStream(socket.getInputStream());
 			DataOutputStream saida = new DataOutputStream(socket.getOutputStream());
 
-			byte[] inteiros = { 1, 5, 6, 2, 3, 4, 8, 26 };
+			byte[] inteiros = { 1, 5, 6, 2, 3, 4, 8, 26 };//passa os numeros em byte
 			int op = 1;
 
 			saida.write(op);

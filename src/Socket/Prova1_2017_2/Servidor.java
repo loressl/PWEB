@@ -15,7 +15,7 @@ public class Servidor {
 			while(true) {
 				System.out.println("Aguardando cliente...");
 				Socket cliente = socket.accept();
-				Thread thread = new Thread(new VetorInteiro(cliente));
+				Thread thread = new Thread(new VetorInteiro(cliente));//passa a classe que for usar para manipular os dados no parametro
 				thread.start();
 			}
 			

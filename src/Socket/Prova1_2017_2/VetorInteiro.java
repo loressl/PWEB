@@ -17,6 +17,7 @@ public class VetorInteiro implements Runnable{
 		this.cliente = cliente;
 	}
 	
+	//retorna um vetor com numeros pares
 	public byte[] pares(byte[] vetor){
 		byte[] pares = new byte[vetor.length];
 		int cont =0;
@@ -26,12 +27,13 @@ public class VetorInteiro implements Runnable{
 				pares[cont++]=vetor[i];
 		}
 		
-		byte[] trim = new byte[cont];
-		System.arraycopy(pares, 0, trim, 0, cont);
+		byte[] trim = new byte[cont];//vai instanciar um novo vetor com a qtd de pares
+		System.arraycopy(pares, 0, trim, 0, cont);//copia para o trim o novo vetor q só tenha a quantidade, pois pode vir zeros
 		return trim;
 		
 	}
 	
+	//retorna um vetor com numeros impares
 	public byte[] impares(byte[] vetor){
 		byte[] impares = new byte[vetor.length];
 		int cont =0;
@@ -48,16 +50,17 @@ public class VetorInteiro implements Runnable{
 		return trim;
 	}
 	
+	//letra A, base com pares e topo com impares
 	public byte[] opcao1(byte[] vetor){
 		byte[] todos = new byte[vetor.length]; 
 		int cont =0;
-		byte[] pares = this.pares(vetor);
-		byte[] impares = this.impares(vetor);
+		byte[] pares = this.pares(vetor);//guardei os pares
+		byte[] impares = this.impares(vetor);//guardei os impares
 		
 		try {
 			
-			for(int i=0; i < 2; i++) {
-				if(i==0) {
+			for(int i=0; i < 2; i++) {//como ele tem q add os pares e impares, então roda duas vezes
+				if(i==0) {//como os pares são na base, é o primeiro a entrar no loop
 					for(int j=0; j< pares.length; j++) {
 						todos[cont++] = pares[j];
 					}
@@ -74,6 +77,7 @@ public class VetorInteiro implements Runnable{
 		return todos;
 	}
 	
+	//ordenar
 	public byte[] opcao2(byte[] vetor) {
 		
 		for(int i = vetor.length ; i>= 1; i--) {
