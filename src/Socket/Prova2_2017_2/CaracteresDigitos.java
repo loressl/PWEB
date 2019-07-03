@@ -1,4 +1,4 @@
-package Socket.prova_2017_2_2;
+package Socket.Prova2_2017_2;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
