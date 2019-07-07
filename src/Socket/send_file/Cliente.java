@@ -8,7 +8,8 @@ public class Cliente {
 
 	public static void main(String[] args) {
 		
-		String file = "C:/Users/maqui/OneDrive/Documentos/ANÁLISE E DESENVOLVIMENTO DE SISTEMAS/4º SEMESTRE/PWEB/Arquivo.txt";
+		//colocar caminho da pasta
+		String file = "";
 		
 		try {
 			Socket cliente = new Socket("127.0.0.1", 1234);

@@ -11,8 +11,8 @@ import java.net.Socket;
 
 public class Servidor {
 	public static void main(String[] args) {
-		
-		String file= "C:/Users/maqui/OneDrive/Documentos/ANÁLISE E DESENVOLVIMENTO DE SISTEMAS/4º SEMESTRE/PWEB/Arquivorecebidodocliente.txt";
+		//colocar caminho
+		String file= "";
 		
 		try {
 			
