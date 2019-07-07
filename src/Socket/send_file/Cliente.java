@@ -25,9 +25,8 @@ public class Cliente {
 				if(len == -1)
 					break;
 				out.write(buf, 0, len);
-				
 			}
-			
+
 			out.close();
 			cliente.close();
 			
@@ -35,7 +34,5 @@ public class Cliente {
 			e.printStackTrace();
 			e.getMessage();
 		}
-	
 	}
-
 }

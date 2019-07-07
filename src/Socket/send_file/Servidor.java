@@ -12,7 +12,7 @@ import java.net.Socket;
 public class Servidor {
 	public static void main(String[] args) {
 		
-		String file= "C:/Users/maqui/OneDrive/Documentos/ANÁLISE E DESENVOLVIMENTO DE SISTEMAS/4º SEMESTRE/PWEB/Arquivoenviadopelocliente.txt";
+		String file= "C:/Users/maqui/OneDrive/Documentos/ANÁLISE E DESENVOLVIMENTO DE SISTEMAS/4º SEMESTRE/PWEB/Arquivorecebidodocliente.txt";
 		
 		try {
 			
@@ -34,15 +34,11 @@ public class Servidor {
 				arquivo.write(buf, 0, len);
 				
 			}
-			
 			input.close();
 			servidor.close();
 			cliente.close();
-			
-			
 		} catch (Exception e) {
 			e.printStackTrace();
-			e.getMessage();
 		}
 		System.out.println("Arquivo recebido com sucesso!");
 	}
