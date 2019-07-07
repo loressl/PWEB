@@ -32,14 +32,12 @@ public class Cliente {
 				
 				System.out.print("Digite uma mensagem cliente: ");
 				String mensagem = teclado.nextLine();
-				
 				escrita.println(mensagem);
 				
 				if("FIM".equals(mensagem))
 					break;
 				
 				mensagem = ler.readLine();
-				
 				System.out.println("Mensagem recebida do servidor: "+ mensagem);
 			}
 			
@@ -48,7 +46,6 @@ public class Cliente {
 			ler.close();
 			escrita.close();
 			socket.close();
-
 
 		} catch (Exception e) {
 			e.printStackTrace();
