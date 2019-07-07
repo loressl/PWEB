@@ -23,7 +23,6 @@ public class CaracteresDigitos implements Runnable{
 		
 		byte[] trim = new byte[cont];
 		System.arraycopy(novo, 0, trim, 0, cont);
-		
 		return trim;
 	}
 	
@@ -39,7 +38,6 @@ public class CaracteresDigitos implements Runnable{
 		
 		byte[] trim = new byte[cont];
 		System.arraycopy(novo, 0, trim, 0, cont);
-		
 		return trim;
 	}
 	
@@ -54,7 +52,6 @@ public class CaracteresDigitos implements Runnable{
 				}
 			}
 		}
-		
 		return numeros;
 	}
 	
@@ -69,7 +66,6 @@ public class CaracteresDigitos implements Runnable{
 				}
 			}
 		}
-		
 		return numeros;
 	}
 	
@@ -105,7 +101,6 @@ public class CaracteresDigitos implements Runnable{
 		
 		byte[] trim = new byte[cont];
 		System.arraycopy(novo, 0, trim, 0, cont);
-		
 		return trim;
 	}
 	
@@ -126,7 +121,6 @@ public class CaracteresDigitos implements Runnable{
 		for(int i=0; i<numeros.length;i++) {
 			numeros[i]= (byte) this.fatorial(numeros[i]);
 		}
-		
 		return numeros;
 	}
 	
@@ -182,11 +176,8 @@ public class CaracteresDigitos implements Runnable{
 				break;
 			}
 			
-			
 		} catch (Exception e) {
 			System.out.println(e);
-		}
-		
+		}	
 	}
-
 }

@@ -9,7 +9,6 @@ import java.net.UnknownHostException;
 public class Cliente {
 	
 	public static void main(String[] args) throws UnknownHostException, IOException {
-		
 		try {
 			System.out.println("Iniciando cliente...");
 			Socket cliente = new Socket("127.0.0.1", 1234);
@@ -50,6 +49,5 @@ public class Cliente {
 		}
 		
 		System.out.println("\nEncerrando conexão do cliente...");
-		
 	}
 }
