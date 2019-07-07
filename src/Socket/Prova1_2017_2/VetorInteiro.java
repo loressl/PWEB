@@ -88,6 +88,19 @@ public class VetorInteiro implements Runnable {
 		return vetor;
 	}
 
+	public int produtoEscalar(byte[] vet1, byte[] vet2) {
+		int result = 0;
+		
+		if(vet1.length == vet2.length) {
+			for(int i=0; i< vet1.length; i++) {
+				result += vet1[i] * vet2[i];
+			}
+		}
+		
+		
+		return result;
+	}
+	
 	@Override
 	public void run() {
 
@@ -103,6 +116,11 @@ public class VetorInteiro implements Runnable {
 			byte[] vet = new byte[lengt];
 			entrada.read(vet, 0, lengt);// passa o vetor do fluxo de entra para o vet
 
+			int lengt2= entrada.read();
+			byte[] vet2 = new byte[lengt2];
+			entrada.read(vet2, 0, lengt2);
+			
+			
 			byte[] resultado = null;
 
 			switch (opcao) {
@@ -125,6 +143,8 @@ public class VetorInteiro implements Runnable {
 				saida.flush();
 				break;
 			case 4:
+				saida.write(this.produtoEscalar(vet, vet2));
+				saida.flush();
 				break;
 			default:
 				break;

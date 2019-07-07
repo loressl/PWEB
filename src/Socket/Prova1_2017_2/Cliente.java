@@ -17,8 +17,9 @@ public class Cliente {
 			DataInputStream entrada = new DataInputStream(socket.getInputStream());
 			DataOutputStream saida = new DataOutputStream(socket.getOutputStream());
 
-			byte[] inteiros = { 1, 5, 6, 2, 3, 4, 8, 26 };//passa os numeros em byte
-			int op = 1;
+			byte[] inteiros = { 1, 5,-6, 2, 3 };//passa os numeros em byte
+			byte[] inteiros2= {7,9,0,13, -10};
+			int op = 4;
 
 			saida.write(op);
 			saida.flush();
@@ -26,13 +27,17 @@ public class Cliente {
 			saida.flush();
 			saida.write(inteiros);
 			saida.flush();
-			if (op != 3) {
+			saida.write(inteiros2.length);
+			saida.flush();
+			saida.write(inteiros2);
+			saida.flush();
+			if (op < 3) {
 				int newLength = entrada.read();
 				byte[] newvet = new byte[newLength];
 				entrada.read(newvet, 0, newLength);
 				for (int i = 0; i < newvet.length; i++) {
 					System.out.print(newvet[i]);
-					System.out.println(",");
+					System.out.print(",");
 				}
 			} else {
 				int qtd = entrada.read();
