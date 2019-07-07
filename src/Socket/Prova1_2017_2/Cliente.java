@@ -9,7 +9,6 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 public class Cliente {
-
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		try {
 			System.out.println("Abrindo conexão do cliente...");
